@@ -1,4 +1,4 @@
-# Independent-Project-8-Three-squares
+# Independent-Project-8-Three-dices
 
 What is the difference between the working directory, the staging area and the repository in Git?
 Here comes your answer:
