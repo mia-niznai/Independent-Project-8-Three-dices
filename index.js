@@ -4,3 +4,8 @@ const select9 = document.getElementById('select9');
 const dice3 = document.getElementById('dice3');
 const dice6 = document.getElementById('dice6');
 const dice9 = document.getElementById('dice9');
+
+//Your code comes below this line
+
+
+//Your code comes above this line
