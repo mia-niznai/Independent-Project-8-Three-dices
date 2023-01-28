@@ -18,50 +18,66 @@ const dice9 = document.getElementById('dice9');
 
 //Your code comes below this line
 
+//Task 1
+
+let currentSelection = null;
+
 select3.addEventListener("click", function(){
-    select3.classList.remove("dice");
-    select3.classList.add("hide");
-    select6.classList.remove("dice");
-    dice6.classList.add("hide");
-    select9.classList.remove("dice");
-    dice9.classList.add("hide");
-    let dice3Value = parseInt(this.innerText);
-    if (dice3Value === 3){
-      this.innerText = 1;
-    }else{
-      this.innerText = dice3Value+1;
+    if(currentSelection === "dice3"){
+        dice6.classList.remove("hide");
     }
-  });
+    select3.classList.add("hide");
+    dice6.classList.add("hide");
+    dice9.classList.add("hide");
+    currentSelection = "dice3";
+      });
   
   select6.addEventListener("click", function (){
-    select6.classList.remove("dice");
-    select6.classList.add("hide");
-    select3.classList.remove("dice");
-    dice3.classList.add("hide");
-    select9.classList.remove("dice");
+      if(currentSelection === "dice3"){
+        dice6.classList.remove("hide");
+      }
+      select6.classList.add("hide");
+      dice3.classList.add("hide");
     dice9.classList.add("hide");
-    let dice6Value = parseInt(this.innerText);
-    if (dice6Value === 6){
-      this.innerText = 1;
-    }else{
-      this.innerText = dice6Value+1;
-    }
-    });
+      currentSelection = "dice6"
+   });
   
   select9.addEventListener("click", function (){
-    select9.classList.remove("dice");
     select9.classList.add("hide");
-    select3.classList.remove("dice");
     dice3.classList.add("hide");
-    select6.classList.remove("dice");
     dice6.classList.add("hide");
-    let dice9Value = parseInt(this.innerText);
-    if (dice9Value === 9){
-      this.innerText = 1;
-    }else{
-      this.innerText = dice9Value+1;
-    }
+    currentSelection = "dice9"
     });
+
+//Task 2
+
+dice3.addEventListener("click", function(){
+    let currentValue = parseInt(this.innerText);
+    if(currentValue === 3){
+        this.innerText = 1;
+    } else {
+        this.innerText = currentValue +1;
+    }
+});
+
+dice6.addEventListener("click", function(){
+    let currentValue = parseInt(this.innerText);
+    if(currentValue === 6){
+        this.innerText = 1;
+    } else {
+        this.innerText = currentValue++;
+    }  
+});
+
+dice9.addEventListener("click", function(){
+    let currentValue = parseInt(this.innerText);
+    if (currentValue ===9){
+        this.innerText = 1
+    } else {
+        this.innerText = currentValue++;
+    }
+})
+}
 
 
 //Your code comes above this line
